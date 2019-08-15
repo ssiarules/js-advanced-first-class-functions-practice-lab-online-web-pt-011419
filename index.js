@@ -19,3 +19,10 @@ function driversByRevenue(drivers){
     return a.revenue - b.revenue;
   });
 }
+
+function driversByName(drivers){
+  let newDrivers = [...drivers]
+  return newDrivers.sort(function (a,b){
+    return a.name.localCompare(b.name);
+  });
+}
